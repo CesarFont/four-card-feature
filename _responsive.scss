@@ -6,8 +6,13 @@
     body {
         .container {
             .info {
+                
                 width: 60%;
                 align-self: center;
+
+                h2{
+                    font-size: 2.3rem;
+                }
             }
 
             .content {
