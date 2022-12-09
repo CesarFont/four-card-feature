@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 15px;
+  background-color: #fafafa;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #a3a5ae;
+}
+
+@media screen and (min-width: 750px) {
+  body .container .info {
+    width: 60%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body .container .content {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+  }
+  body .container .content .cards:nth-child(1) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 1 / span 2 / span 1;
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+  }
+  body .container .cards:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / span 2 / span 1;
+  }
+  body .container .cards:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 3 / 2 / span 2 / span 1;
+  }
+  body .container .cards:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-area: 2 / 3 / span 2 / span 1;
+  }
+}
+
+.container {
+  margin: 5vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  width: 80%;
+}
+
+.container .info {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .4rem;
+}
+
+.container .info h2:nth-child(1) {
+  font-weight: 200;
+}
+
+.container .info h2:nth-child(2) {
+  color: #4c4e61;
+}
+
+.container .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.container .content .cards {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem;
+  -webkit-box-shadow: 2px 4px 10px #a3a5ae;
+          box-shadow: 2px 4px 10px #a3a5ae;
+}
+
+.container .content .cards img {
+  margin-top: 2rem;
+  width: 3.3rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.container .content .cards h2 {
+  color: #4c4e61;
+  padding-bottom: .5rem;
+}
+
+.container .content .cards:nth-child(1) {
+  border-top: medium solid #45d3d3;
+}
+
+.container .content .cards:nth-child(2) {
+  border-top: medium solid #ea5353;
+}
+
+.container .content .cards:nth-child(3) {
+  border-top: medium solid #fcaf4a;
+}
+
+.container .content .cards:nth-child(4) {
+  border-top: medium solid #549ef2;
+}
+/*# sourceMappingURL=main.css.map */

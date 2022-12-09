@@ -1,0 +1,38 @@
+@mixin border-top ($color) {
+    border-top: medium solid $color;
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        .container {
+            .info {
+                width: 60%;
+                align-self: center;
+            }
+
+            .content {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+
+                .cards:nth-child(1) {
+                    grid-area: 2 / 1 / span 2 / span 1;
+                    /* in order: x offset, y offset, blur size, spread size, color */
+                    /* blur size and spread size are optional (they default to 0) */
+                }
+            }
+
+            .cards:nth-child(2) {
+                grid-area: 1 / 2 / span 2 / span 1;
+            }
+
+            .cards:nth-child(3) {
+                grid-area: 3 / 2 / span 2 / span 1;
+            }
+
+            .cards:nth-child(4) {
+                grid-area: 2 / 3 / span 2 / span 1;
+            }
+        }
+
+    }
+}
